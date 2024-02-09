@@ -1,0 +1,58 @@
+﻿@{
+    ViewData["Title"] = "";
+}
+<h1>PRICING CALCULATOR</h1>
+
+<p>Let me help you on your journey to running a marathon! I can provide custom training plans and tips. </p>
+<br /><br />
+
+<form>
+    <label for="hours">Number of Hours Needed:</label>
+    <input type="number" id="hours" min="0" step="1" required>
+    <br /><br />
+
+    <label for="hourlyRate">Hourly Rate:</label>
+    <input type="text" id="hourlyRate" value="@Model.HourlyRate.ToString("C")" readonly>
+    <br /><br />
+
+    <button type="button" id="calculateBtn">Calculate Total</button>
+    <br /> <br />
+
+    <label for="total">Total:</label>
+    <input type="text" id="total" readonly>
+    <br /><br />
+</form>
+
+<a href="@Url.Action("Index", "Home")">Back to Home</a>
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<p>Please note: for those in need of me running a marathon under their name (so you can still get that sticker), contact me privately and we can discuss alternative pricing.</p>
+
+
+@section scripts {
+    <script src="~/Scripts/site.js"></script>
+}
+
+
+
+<!--
+•
+• An non-editable box that shows how much you charge per hour
+• A button that allows the user to calculate the total
+• An output box that shows the total
+• Navigation back to the home page
+-->
